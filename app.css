@@ -1,0 +1,88 @@
+body {
+ background-color: bisque;
+ 
+}
+h1 {
+margin-inline: 600px;
+color: orange;
+border: 10cm;
+border-color: black;
+}
+.navbar{
+    background-color: #f2f2f2;
+    padding: 20px;
+    align-items: end;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+    flex-direction: column;
+}
+nav ul{
+    margin: 0%;
+    padding: 0%;
+    display: flex;
+    justify-content: end;
+}
+nav li{
+    margin: 0 10px ;
+    border: 10cm;
+    display: block;
+}
+nav a {
+    text-decoration: solid;
+    color: blueviolet;
+    font-weight: bold;
+    cursor: pointer;
+}
+.dropdown {
+    display: flex;
+}
+.dropdown li{
+    padding: 10px;
+}
+li:hover.dropdown{
+    display: block;
+}
+ul li ul.dropdown{
+    width: 100%;
+    background:#22438C ;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+ul li:hover ul.dropdown{
+    display: block;
+}
+form {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
