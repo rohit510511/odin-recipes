@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <h1>Odin Recipes</h1>
+    <h3>Form</h3>
+    <form name="submit-to-google-sheet">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required> 
+    
+    
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+    
+        <label for="message">Message:</label>
+        <textarea id="message" name="message"></textarea> 
+    
+    
+        <input type="submit" value="Submit"> <br>
+    <span id="Success"></span>
+      </form>
+      <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwUwmxP2NlXrEG036aw5-TcGH1rgM4hR1CLmyFiq2YBvOmuuaQ0-K03Jsk1QGXsf7nK/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const success=document.getElementById("Success") 
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response =>{ success.innerHTML="Data successfully submited "})
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>
